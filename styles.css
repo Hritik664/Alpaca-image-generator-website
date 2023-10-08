@@ -1,0 +1,322 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-size: 16px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End CSS Reset */
+
+:root {
+    --primary: #5596F6;
+}
+* {
+    font-family: 'Inter', sans-serif;
+}
+.name {
+    font-weight: bold;
+}
+.controls__title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.button {
+    border-radius: 100px;
+    padding: .6rem 1.2rem;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    border: 0;
+}
+.button__controls {
+    color: var(--primary);
+    outline: 1px solid var(--primary);
+    background-color: transparent;
+    margin: 0 5px 10px 0;
+}
+.button__controls:hover,
+.button__contols:focus
+{
+    outline: 2px solid var(--primary);
+}
+.button__controls:active,
+.active
+{
+    color: white;
+    background-color: var(--primary);
+    outline: none;
+}
+.active:hover {
+    outline: none;
+}
+.button__download {
+    color: white;
+    background-color: #1a1a1a;
+    transition: .1s ease-in;
+}
+.button__random {
+    color: #1a1a1a;
+    background-color: transparent;
+    border: 1px solid #1a1a1a;
+}
+.button__download:hover {
+    background-color: var(--primary);
+    transition: .1s ease-in;
+}
+.button__random:hover {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.button__color {
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 100%;
+    padding: 5px;
+    background-color: white;
+    line-height: 0;
+    cursor: pointer;
+}
+.button__color:hover,
+.button__color_active {
+    border: 2px solid var(--primary);
+}
+.button__color_swatch {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    border-radius: 100%;
+}
+#container {
+    max-width: 1200px;
+    margin: auto;
+}
+@media (max-width:1200px) {
+    #controls__footer button {
+        margin: 0 5px 10px 0;
+    }
+    #copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 2rem 2rem 2rem;
+    }
+    #button_group__functions button {
+        margin: 0 5px 10px 0;
+    }
+}
+@media (min-width:1200px) {
+    #app {
+        display: flex;
+        
+    }
+    #container {
+        margin: 80px auto;
+    }
+    #image {
+        width: 50%;
+        height: 50%;
+        border-radius: 6px 0 0 6px !important;
+    }
+    #controls {
+        width: 50%;
+        border-radius: 0 6px 6px 0 !important;
+        border-left: 0;
+    }
+    #controls__footer {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+    #button_group__functions {
+        display: flex;
+        gap: 1rem;
+    }
+    #copyright {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+}
+#app {
+    padding: 2rem;
+}
+#controls {
+    outline: 1px solid #F0F0F0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0 0 6px 6px;
+}
+#controls__header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #F0F0F0;
+}
+.header__name {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+#controls__sections {
+    padding: 1.5rem 2rem;
+    flex: 1;
+} 
+.controls__section {
+    margin-bottom: 1rem;
+}
+.profile-picture {
+    width: 35px;
+    height: auto;
+    border-radius: 100%;
+}
+#controls__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+#controls__footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #F0F0F0;
+}
+#image {
+    background-color: var(--primary);
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 6px 6px 0 0;
+}
+.active__colors {
+    display: inline-flex;
+    flex-flow: column wrap;
+    gap: .5rem;
+    height: 125px;
+}
+.image__part {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+.icon__download {
+    margin-left: 5px;
+}
+i {
+    font-size: 12px;
+}
+#copyright {
+    color: #b7b7b7;
+}
+#copyright a {
+    text-decoration: none;
+    color:#b7b7b7;
+}
+#copyright a:hover {
+    color:#949494;
+}
+#theme.button {
+    padding: .6rem 2rem;
+}
+
+/* Dark mode */
+
+html {
+    transition: .1s ease-in;
+}
+html[data-theme='dark'] {
+    transition: .1s ease-in;
+    background-color: #26282f;
+}
+html[data-theme='dark'] #controls {
+    background-color: #454c63;
+    outline: 0;
+}
+html[data-theme='dark'] #controls__header {
+    border-bottom: 0;
+    background-color: #33394b;
+    border-radius: 0 6px 0 0;
+}
+html[data-theme='dark'] #controls__footer {
+    border-top: 0;
+    background-color: #33394b;
+    border-radius: 0 0 6px 0;
+}
+html[data-theme='dark'] h1,
+html[data-theme='dark'] h2 {
+    color: white;
+}
+html[data-theme='dark'] .button__controls {
+    outline: 0;
+    background-color: #33394b;
+    color: #d8dff3;
+}
+html[data-theme='dark'] .button__controls:hover {
+    outline: 2px solid var(--primary);
+}
+html[data-theme='dark'] .active:hover {
+    outline: 0;
+}
+html[data-theme='dark'] #copyright,
+html[data-theme='dark'] #copyright a {
+    color: #69728f;
+}
+html[data-theme='dark'] .button__random {
+    color: #d8dff3;
+    border: 1px solid #d8dff3;
+}
+html[data-theme='dark'] .button__random:hover {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+html[data-theme='dark'] .button__download {
+    background-color: var(--primary)
+}
+html[data-theme='dark'] .active {
+    background-color: var(--primary);
+    color: white;
+}
+html[data-theme='dark'] .button__color {
+    background-color: #454c63;
+}
+html[data-theme='dark'] #theme.button {
+    background-color: #d8dff3;
+    color: #26282f;
+}
